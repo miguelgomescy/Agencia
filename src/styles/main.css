@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+  /* cores */
+  --color-bg: #F5F3EE;
+  --color-text: #111111;
+  --color-dark: #0D0D0D;
+  --color-light: #FFFFFF;
+  --color-border: #D9D9D9;
+
+  /* fontes */
+  --font-heading: 'JetBrains Mono', monospace;
+  --font-body: 'DM Sans', sans-serif;
+
+  /* espaçamento base */
+  --container-width: 1200px;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-text);
+
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+p {
+  line-height: 1.5;
+}
+
+
+
+/* Botão Base */
+
+button {
+  font-family: var(--font-heading);
+  cursor: pointer;
+  border: none;
+}
+
+
+/* Links */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* Container */
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
