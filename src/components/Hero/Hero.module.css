@@ -8,8 +8,7 @@
   gap: 48px;
   align-items: start;
   padding: 40px 0 56px;
-  border-left: 1px solid var(--color-border);
-  border-right: 1px solid var(--color-border);
+ 
 }
 
 .content {

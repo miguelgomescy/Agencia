@@ -32,7 +32,7 @@ function Contact() {
             <div className={styles.contactList}>
               <div className={styles.contactItem}>
                 <span className={styles.contactLabel}>WHATSAPP</span>
-                <span className={styles.contactValue}>(11) 9 0000-0000</span>
+                <span className={styles.contactValue}>(11) 9 4386-5242</span>
               </div>
 
               <div className={styles.contactItem}>
@@ -144,7 +144,7 @@ function Contact() {
               </button>
 
               <a
-                href="https://wa.me/5511990000000"
+                href="https://wa.me/5511943865242"
                 target="_blank"
                 rel="noreferrer"
                 className={styles.whatsappButton}

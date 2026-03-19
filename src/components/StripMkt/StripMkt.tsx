@@ -9,21 +9,30 @@ const items = [
   'SUPORTE DIRETO',
 ]
 
-function MktStrip() {
-  const repeatedItems = [...items, ...items]
+const repeatedItems = [...items, ...items, ...items, ...items]
 
+function StripTrack() {
   return (
-    <section className={styles.strip}>
-      <div className={styles.track}>
-        {repeatedItems.map((item, index) => (
-          <div key={index} className={styles.item}>
-            <span className={styles.square} />
-            <span className={styles.text}>{item}</span>
-          </div>
-        ))}
+    <div className={styles.track}>
+      {repeatedItems.map((item, index) => (
+        <div key={index} className={styles.item}>
+          <span className={styles.square} />
+          <span className={styles.text}>{item}</span>
+        </div>
+      ))}
+    </div>
+  )
+}
+
+function StripMkt() {
+  return (
+    <section className={styles.strip} aria-label="Destaques da agência">
+      <div className={styles.marquee}>
+        <StripTrack />
+        <StripTrack />
       </div>
     </section>
   )
 }
 
-export default MktStrip
+export default StripMkt

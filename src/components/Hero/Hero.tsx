@@ -40,11 +40,10 @@ function Hero() {
           <div className={styles.aside}>
             <div className={styles.placeholder}>
               <p>
-                Aqui vai o vídeo
+                Vídeo
                 <br />
-                ou vantagens da
-                <br />
-                CY Mídia
+                vantagens
+              
               </p>
             </div>
           </div>

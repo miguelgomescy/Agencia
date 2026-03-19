@@ -1,4 +1,6 @@
 import styles from './Footer.module.css'
+import { FaLinkedin, FaInstagram  } from "react-icons/fa6";
+import { IoIosMail } from "react-icons/io";
 
 
 
@@ -13,16 +15,16 @@ function Footer() {
 
 
         <div className={styles.socials}>
-          <a href="#" aria-label="Instagram" className={styles.socialButton}>
-            <span>◎</span>
+          <a href="https://www.instagram.com/agenciacymidia/" aria-label="Instagram" className={styles.socialButton} target="_blank">
+            <span><FaInstagram /></span>
           </a>
 
-          <a href="#" aria-label="LinkedIn" className={styles.socialButton}>
-            <span>in</span>
+          <a href="https://www.linkedin.com/company/agenciacymidia/" aria-label="LinkedIn" className={styles.socialButton} target="_blank">
+            <span><FaLinkedin /></span>
           </a>
 
-          <a href="mailto:contato@cymidia.com.br" aria-label="Email" className={styles.socialButton}>
-            <span>✉</span>
+          <a href="#contato" aria-label="Email" className={styles.socialButton}>
+            <span><IoIosMail /></span>
           </a>
         </div>
 

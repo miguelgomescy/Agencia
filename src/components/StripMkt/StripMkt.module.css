@@ -7,17 +7,23 @@
   padding: 14px 0;
 }
 
-.track {
-  width: max-content;
+.marquee {
   display: flex;
-  align-items: center;
-  gap: 36px;
-  animation: scrollLeft 22s linear infinite;
+  width: max-content;
   will-change: transform;
+  animation: marquee 28s linear infinite;
 }
 
-.strip:hover .track {
+.strip:hover .marquee {
   animation-play-state: paused;
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  min-width: max-content;
+  white-space: nowrap;
 }
 
 .item {
@@ -25,6 +31,7 @@
   align-items: center;
   gap: 10px;
   flex-shrink: 0;
+  padding-right: 36px;
 }
 
 .square {
@@ -39,11 +46,11 @@
   font-size: 12px;
   letter-spacing: 0.08em;
   color: #f5f3ee;
-  white-space: nowrap;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
-@keyframes scrollLeft {
+@keyframes marquee {
   from {
     transform: translateX(0);
   }
@@ -57,13 +64,13 @@
     padding: 12px 0;
   }
 
-  .track {
-    gap: 24px;
-    animation-duration: 18s;
+  .marquee {
+    animation-duration: 22s;
   }
 
   .item {
     gap: 8px;
+    padding-right: 24px;
   }
 
   .square {

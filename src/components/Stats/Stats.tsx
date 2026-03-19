@@ -4,20 +4,20 @@ function Stats() {
   const stats = [
     {
       value: '48h',
-      label: 'Pra colocar seu site no ar'
+      label: 'Pra colocar seu site no ar',
     },
     {
       value: '12 soluções',
-      label: 'Digitais disponíveis'
+      label: 'Digitais disponíveis',
     },
     {
       value: '30+',
-      label: 'Projetos entregues'
+      label: 'Projetos entregues',
     },
     {
       value: '0%',
-      label: 'Burocracia'
-    }
+      label: 'Burocracia',
+    },
   ]
 
   return (
