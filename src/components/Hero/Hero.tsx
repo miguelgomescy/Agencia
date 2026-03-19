@@ -2,7 +2,7 @@ import styles from './Hero.module.css'
 
 function Hero() {
   return (
-    <section className={styles.hero}>
+    <section className={styles.hero} id="inicio">
       <div className="container">
         <div className={styles.wrapper}>
           <div className={styles.content}>
@@ -12,9 +12,13 @@ function Hero() {
             </div>
 
             <h1 className={styles.title}>
-              Seu site pronto em 48 horas.
+              Seu site pronto
               <br />
-              Comece a gerar clientes.
+              em 48 horas.
+              <br />
+              Comece a gerar
+              <br />
+              clientes.
             </h1>
 
             <p className={styles.description}>

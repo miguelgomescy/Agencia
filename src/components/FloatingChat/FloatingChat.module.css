@@ -1,0 +1,50 @@
+.chatButton {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+
+  width: 56px;
+  height: 56px;
+
+  background: #111111; /* preto */
+  border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  z-index: 999;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.chatButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.icon {
+  font-size: 22px;
+  color: #ffffff; /* branco */
+  line-height: 1;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .chatButton {
+    width: 52px;
+    height: 52px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .icon {
+    font-size: 20px;
+  }
+}

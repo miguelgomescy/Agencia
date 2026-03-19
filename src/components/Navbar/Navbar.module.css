@@ -4,18 +4,28 @@
   left: 0;
   width: 100%;
   z-index: 1000;
-  transition: background-color 0.25s ease, border-color 0.25s ease;
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    backdrop-filter 0.25s ease,
+    box-shadow 0.25s ease;
   border-bottom: 1px solid transparent;
 }
 
 .atTop {
-  background: #ffffff;
+  background: #f5f3ee;
   border-color: var(--color-border);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: none;
 }
 
 .scrolled {
-  background: transparent;
-  border-color: transparent;
+  background: rgba(245, 243, 238, 0.82);
+  border-color: rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
 }
 
 .wrapper {
@@ -29,24 +39,36 @@
 .logoLink {
   display: inline-flex;
   align-items: center;
+  width: fit-content;
+  text-decoration: none;
 }
 
 .logo {
   width: 62px;
   height: auto;
   display: block;
+  border-radius: 100px;
 }
 
 .nav {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 32px;
 }
 
 .nav a {
+  position: relative;
+  text-decoration: none;
   font-family: var(--font-heading);
   font-size: 14px;
+  color: var(--color-text);
   text-transform: uppercase;
+  transition: opacity 0.2s ease;
+}
+
+.nav a:hover {
+  opacity: 0.65;
 }
 
 .cta {
@@ -58,7 +80,154 @@
   border: 1px solid var(--color-dark);
   background: var(--color-dark);
   color: var(--color-light);
+  text-decoration: none;
   font-family: var(--font-heading);
   font-size: 14px;
   white-space: nowrap;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.cta:hover {
+  opacity: 0.92;
+}
+
+.menuButton {
+  display: none;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border: 1px solid var(--color-dark);
+  background: transparent;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menuButton span {
+  width: 20px;
+  height: 2px;
+  background: var(--color-dark);
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.menuButtonOpen span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menuButtonOpen span:nth-child(2) {
+  opacity: 0;
+}
+
+.menuButtonOpen span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.mobileMenu {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .wrapper {
+    min-height: 72px;
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+  }
+
+  .nav,
+  .cta {
+    display: none;
+  }
+
+  .menuButton {
+    display: inline-flex;
+  }
+
+  .logo {
+    width: 54px;
+  }
+
+  .mobileMenu {
+    display: block;
+    position: fixed;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 72px);
+    padding: 20px 20px 32px;
+    background: rgba(245, 243, 238, 0.96);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition:
+      opacity 0.22s ease,
+      transform 0.22s ease,
+      visibility 0.22s ease;
+  }
+
+  .mobileMenuOpen {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .mobileNav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .mobileNav a {
+    padding: 14px 4px;
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-size: 18px;
+    color: var(--color-text);
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .mobileCta {
+    margin-top: 12px;
+    padding: 14px 16px !important;
+    border: 1px solid var(--color-dark);
+    background: var(--color-dark);
+    color: var(--color-light) !important;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    min-height: 68px;
+  }
+
+  .logo {
+    width: 48px;
+  }
+
+  .mobileMenu {
+    top: 68px;
+    height: calc(100vh - 68px);
+    padding: 16px 16px 28px;
+  }
+
+  .mobileNav a {
+    font-size: 16px;
+  }
+
+  .menuButton {
+    width: 42px;
+    height: 42px;
+  }
 }

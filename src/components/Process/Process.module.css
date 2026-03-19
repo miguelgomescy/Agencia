@@ -1,0 +1,166 @@
+.process {
+  width: 100%;
+  padding: 72px 20px 88px;
+  background: #050505;
+  color: #f5f3ee;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 40px;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: #7e7e7e;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 64px;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  color: #f5f3ee;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: #080808;
+}
+
+.card {
+  min-height: 420px;
+  padding: 34px 28px 32px;
+  border-left: 1px solid #1a1a1a;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:first-child {
+  border-left: none;
+}
+
+.number {
+  display: block;
+  margin-bottom: 48px;
+  font-family: var(--font-heading);
+  font-size: 72px;
+  line-height: 1;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.12);
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.cardTitle {
+  margin: 0 0 18px;
+  font-family: var(--font-heading);
+  font-size: 22px;
+  line-height: 1.05;
+  text-transform: uppercase;
+  color: #f5f3ee;
+}
+
+.description {
+  max-width: 240px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.65;
+  color: #9a9a9a;
+}
+
+@media (max-width: 1024px) {
+  .title {
+    font-size: 52px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    min-height: 340px;
+    border-top: 1px solid #1a1a1a;
+  }
+
+  .card:nth-child(1),
+  .card:nth-child(2) {
+    border-top: none;
+  }
+
+  .card:nth-child(3) {
+    border-left: none;
+  }
+
+  .number {
+    font-size: 60px;
+    margin-bottom: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .process {
+    padding: 56px 16px 72px;
+  }
+
+  .header {
+    margin-bottom: 28px;
+  }
+
+  .title {
+    font-size: 42px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    min-height: auto;
+    padding: 28px 20px;
+    border-left: none;
+    border-top: 1px solid #1a1a1a;
+  }
+
+  .card:first-child {
+    border-top: none;
+  }
+
+  .number {
+    font-size: 52px;
+    margin-bottom: 24px;
+  }
+
+  .icon {
+    margin-bottom: 18px;
+    font-size: 22px;
+  }
+
+  .cardTitle {
+    font-size: 18px;
+    margin-bottom: 14px;
+  }
+
+  .description {
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
