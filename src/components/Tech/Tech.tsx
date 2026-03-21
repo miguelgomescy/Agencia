@@ -1,24 +1,35 @@
 import styles from './Tech.module.css'
+import { FaReact, FaNodeJs, FaPython, FaMobile,FaRobot, FaDocker,
+  FaWhatsapp, FaFigma, FaShopify, FaTiktok, FaInstagram, FaYoutube, FaPinterest,
+ } from "react-icons/fa";
+import { BiLogoPostgresql } from "react-icons/bi";
+import { SiGoogleanalytics } from "react-icons/si";
+import { FcLinux, FcGoogle} from "react-icons/fc";
+import { FaMeta } from "react-icons/fa6";
+
+
+
+
 
 const technologies = [
-  { icon: '⚛️', name: 'REACT' },
-  { icon: '🟩', name: 'NODE.JS' },
-  { icon: '🐘', name: 'POSTGRESQL' },
-  { icon: '🐍', name: 'PYTHON' },
-  { icon: '📱', name: 'REACT NATIVE' },
-  { icon: '🤖', name: 'CLAUDE API' },
-  { icon: '📊', name: 'GA4' },
-  { icon: '🐳', name: 'DOCKER' },
-  { icon: '🔌', name: 'ESP32' },
-  { icon: '🔁', name: 'N8N' },
-  { icon: '💬', name: 'WHATSAPP API' },
-  { icon: '☁️', name: 'AWS/VPS' },
-  { icon: '🎨', name: 'FIGMA' },
-  { icon: '📣', name: 'META ADS' },
-  { icon: '🔎', name: 'GOOGLE ADS' },
-  { icon: '🚀', name: 'VERCEL' },
-  { icon: '▲', name: 'NEXT.JS' },
-  { icon: '💳', name: 'STRIPE' },
+  { icon: <FaReact />, name: 'REACT' },
+  { icon: <FaNodeJs />, name: 'NODE.JS' },
+  { icon: <BiLogoPostgresql />, name: 'POSTGRESQL' },
+  { icon: <FaPython />, name: 'PYTHON' },
+  { icon: <FaMobile />, name: 'REACT NATIVE' },
+  { icon: <FaRobot />, name: 'CLAUDE API' },
+  { icon: <SiGoogleanalytics />, name: 'GA4' },
+  { icon: <FaDocker />, name: 'DOCKER' },
+  { icon: <FcLinux />, name: 'LINUX' },
+  { icon: <FcGoogle />, name: 'Google ADS' },
+  { icon: <FaMeta />, name: 'META ADS' },
+  { icon: <FaWhatsapp/>, name: 'WHATSAPP BUSINESS' },
+  { icon: <FaFigma />, name: 'FIGMA' },
+  { icon: <FaShopify />, name: 'SHOPIFY' },
+  { icon: <FaTiktok />, name: 'TIKTOK ADS' },
+  { icon: <FaPinterest />, name: 'PINTEREST' },
+  { icon: <FaYoutube />, name: 'YOUTUBE' },
+  { icon: <FaInstagram />, name: 'INSTAGRAM' },
 ]
 
 function Tech() {

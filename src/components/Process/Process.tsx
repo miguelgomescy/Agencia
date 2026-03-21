@@ -1,30 +1,38 @@
 import styles from './Process.module.css'
+import { FaMagnifyingGlass } from "react-icons/fa6";
+import { IoIosRocket } from "react-icons/io";
+import { FaHandshake } from "react-icons/fa";
+import { GiCargoCrane } from "react-icons/gi";
+
+
+
+
 
 const steps = [
   {
     number: '01',
-    icon: '🔎',
+    icon: <FaMagnifyingGlass />,
     title: 'DIAGNÓSTICO',
     description:
       'Entendemos o que sua empresa precisa de verdade — sem jargão, sem enrolação. Uma conversa resolve.',
   },
   {
     number: '02',
-    icon: '🏗️',
+    icon: <GiCargoCrane />,
     title: 'DESENVOLVIMENTO',
     description:
       'Construímos a solução com tecnologia moderna, código limpo e design focado em resultado.',
   },
   {
     number: '03',
-    icon: '🚀',
+    icon: <IoIosRocket />,
     title: 'ENTREGA',
     description:
       'Você recebe o projeto funcionando, testado em mobile e pronto para gerar resultado desde o primeiro dia.',
   },
   {
     number: '04',
-    icon: '🤝',
+    icon: <FaHandshake />,
     title: 'SUPORTE',
     description:
       'Não sumimos após a entrega. Acompanhamos a evolução e garantimos que o sistema continue no ar e performando.',
