@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import styles from './Faq.module.css'
+import Reveal from '../Reveal/Reveal'
+
 
 const faqItems = [
   {
@@ -40,7 +42,9 @@ function Faq() {
     <section className={styles.faq} id="faq">
       <div className={styles.container}>
         <div className={styles.header}>
-          <h2 className={styles.title}>FAQ</h2>
+          <Reveal>
+            <h2 className={styles.title}>FAQ</h2>
+          </Reveal>
         </div>
 
         <div className={styles.list}>

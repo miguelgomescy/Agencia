@@ -1,4 +1,5 @@
 import styles from './Portifolio.module.css'
+import Reveal from '../Reveal/Reveal'
 
 const projects = [
   {
@@ -28,34 +29,44 @@ function Portfolio() {
     <section className={styles.portfolio} id="portfolio">
       <div className={styles.container}>
         <div className={styles.header}>
-          <span className={styles.eyebrow}>Soluções para sua empresa</span>
-          <h2 className={styles.title}>
-            PORTIFOLIO &<br />
-            CASES
-          </h2>
+          <Reveal>
+            <span className={styles.eyebrow}>Soluções para sua empresa</span>
+          </Reveal>
+
+          <Reveal delay={80}>
+            <h2 className={styles.title}>
+              PORTIFOLIO &<br />
+              CASES
+            </h2>
+          </Reveal>
         </div>
 
         <div className={styles.grid}>
           {projects.map((project, index) => (
-            <article key={index} className={styles.card}>
-              <button className={styles.arrowButton} aria-label={`Ver projeto ${project.title}`}>
-                →
-              </button>
+            <Reveal key={project.title} delay={index * 90}>
+              <article className={styles.card}>
+                <button
+                  className={styles.arrowButton}
+                  aria-label={`Ver projeto ${project.title}`}
+                >
+                  →
+                </button>
 
-              <div className={styles.cardContent}>
-                <span className={styles.category}>{project.category}</span>
+                <div className={styles.cardContent}>
+                  <span className={styles.category}>{project.category}</span>
 
-                <h3 className={styles.cardTitle}>{project.title}</h3>
+                  <h3 className={styles.cardTitle}>{project.title}</h3>
 
-                <div className={styles.tags}>
-                  {project.tags.map((tag, tagIndex) => (
-                    <span key={tagIndex} className={styles.tag}>
-                      {tag}
-                    </span>
-                  ))}
+                  <div className={styles.tags}>
+                    {project.tags.map((tag) => (
+                      <span key={tag} className={styles.tag}>
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            </article>
+              </article>
+            </Reveal>
           ))}
         </div>
       </div>

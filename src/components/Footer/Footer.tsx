@@ -1,11 +1,13 @@
 import styles from './Footer.module.css'
 import { FaLinkedin, FaInstagram  } from "react-icons/fa6";
 import { IoIosMail } from "react-icons/io";
+import Reveal from '../Reveal/Reveal';
 
 
 
 function Footer() {
   return (
+    <Reveal> 
     <footer className={styles.footer}>
       <div className={styles.container}>
 
@@ -41,6 +43,7 @@ function Footer() {
         </p>
       </div>
     </footer>
+    </Reveal>
   )
 }
 
