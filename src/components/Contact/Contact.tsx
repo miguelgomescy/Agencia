@@ -131,7 +131,7 @@ function Contact() {
 
               <div className={styles.contactItem}>
                 <span className={styles.contactLabel}>E-MAIL</span>
-                <span className={styles.contactValue}>contato@cymidia.com.br</span>
+                <span className={styles.contactValue}>agencicymidia@gmail.com</span>
               </div>
 
               <div className={styles.contactItem}>
