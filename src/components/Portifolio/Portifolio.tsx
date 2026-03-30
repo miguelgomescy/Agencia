@@ -20,7 +20,7 @@ const projects = [
   {
     category: 'IOT + DASHBOARD',
     title: 'SITE PARA TRANSPORTADORA',
-    tags: ['ESP32', 'MQTT', 'Dashboard'],
+    tags: ['React', 'Node.js', 'WhatsApp'],
   },
 ]
 
