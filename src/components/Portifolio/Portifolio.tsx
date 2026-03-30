@@ -4,7 +4,7 @@ import Reveal from '../Reveal/Reveal'
 const projects = [
   {
     category: 'LANDING PAGE + GESTÃO DE REDES',
-    title: 'CLÍNICA ESTÉTICA SP',
+    title: 'SITE PARA CANIL',
     tags: ['Site', 'Instagram', 'CRM'],
   },
   {
@@ -14,12 +14,12 @@ const projects = [
   },
   {
     category: 'E-COMMERCE + AUTOMAÇÃO',
-    title: 'LOJA VIRTUAL COM IA',
+    title: 'LOJA VIRTUAL',
     tags: ['Next.js', 'Pagamento', 'Chatbot'],
   },
   {
     category: 'IOT + DASHBOARD',
-    title: 'MONITOR INDUSTRIAL',
+    title: 'SITE PARA TRANSPORTADORA',
     tags: ['ESP32', 'MQTT', 'Dashboard'],
   },
 ]
